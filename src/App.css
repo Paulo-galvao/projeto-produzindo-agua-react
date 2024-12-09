@@ -7,5 +7,18 @@
 :root {
     --light-blue: rgb(179, 218, 255, 0.5);  
     --menu-hover: rgb(179, 218, 255);
-    --standard-width: 1280px;
+    --standard-width: 1024px;
+    --menu-font: rgba(0, 26, 51, .8);
   }
+
+body {
+    background-color: rgb(240, 255, 255);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

@@ -1,0 +1,48 @@
+.banner-container {
+    max-width: var(--standard-width);
+    margin: 0 auto;
+}
+
+.banner {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+h1 {
+    font-size: 1.2rem;
+    width: 80%;
+    text-align: center;
+}
+
+.banner-images {
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.banner-images img {
+    border: 10px solid var(--light-blue);
+    border-radius: 5px;
+    width: 140px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+}
+
+blockquote p {
+    text-align: center;
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
