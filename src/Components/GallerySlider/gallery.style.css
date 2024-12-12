@@ -1,0 +1,31 @@
+.gallery-container {
+    width: var(--standard-width);
+    margin: 0 auto;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.gallery-container aside {
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    min-height: 90vh;
+}
+
+.gallery-container aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-container aside li {
+    font-size: .9rem;
+    cursor: pointer;
+    padding: 5px 0;
+    height: 100%;
+    
+}
+
+.gallery-container aside li.active {
+    background-color: pink;
+}

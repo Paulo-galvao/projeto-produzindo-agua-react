@@ -21,13 +21,8 @@ const menu = [
     },
     {
         id: 5,
-        name: "Contato",
-        route: "/contact"
-    },
-    {
-        id: 6,
         name: "Galeria",
-        route: "/galery"
+        route: "/gallery"
     }        
 ]
 

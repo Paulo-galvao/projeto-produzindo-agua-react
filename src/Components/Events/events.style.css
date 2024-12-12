@@ -24,3 +24,7 @@
 .events a:hover {
     background-color: var(--menu-hover);
 } 
+
+.banner-container h2 {
+    margin-top: 50px;
+}
