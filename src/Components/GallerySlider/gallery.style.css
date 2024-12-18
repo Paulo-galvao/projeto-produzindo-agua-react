@@ -1,31 +1,156 @@
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+aside.active {
+    display: block;
+    border-right: 10px solid #e3e3e3;
+}
+
+aside {
+    display: none;
+}
+
 .gallery-container {
-    width: var(--standard-width);
+    max-width: var(--standard-width);
     margin: 0 auto;
     min-height: 90vh;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
-.gallery-container aside {
-    border-right: 1px solid #000;
-    border-left: 1px solid #000;
-    min-height: 90vh;
-}
-
 .gallery-container aside ul {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    
 }
 
 .gallery-container aside li {
     font-size: .9rem;
     cursor: pointer;
-    padding: 5px 0;
-    height: 100%;
-    
+    padding: 5px 10px;    
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    max-height: 50px;
+}
+
+.gallery-container aside li:hover {
+    background-color: rgb(179, 218, 255, 0.4);
+
 }
 
 .gallery-container aside li.active {
-    background-color: pink;
+    background-color: rgb(179, 218, 255);
+}
+
+.gallery-banner {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery-banner button {
+    position: absolute;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.gallery-banner button:hover {
+    background-color: rgb(256, 256 , 256, 0.1);
+}
+
+.gallery-banner i {
+    font-size: 3rem;
+
+}
+
+.next-btn {
+    right: 0px;
+    height: 70vh;
+}
+
+.back-btn {
+    left: 0px;
+    height: 70vh;
+}
+
+.counter-img {
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+    color: #fff;
+
+    
+}
+
+.img-container  {
+    margin: 0 auto;
+    border: 1px solid #000;
+    width: 100%;
+    height: 70vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.img-container.full-screen {
+    z-index: 1;
+    left: 0;
+    position: fixed;
+    min-height: 90vh;
+    min-width: 100vw;
+    margin: 0px;
+}
+
+.full-screen-btn.active {
+    display: block;
+    color: #fff;
+    position: absolute;
+    right: 10px;    
+    bottom: 10px;
+    
+}
+
+.full-screen-btn {
+    display: none;
+    position: absolute;
+    
+}
+
+.full-screen-btn i {
+    font-size: 1.5rem;
+}
+
+.exit-full-screen-btn {
+    right: 20px;
+    bottom: 20px;
+    display: none;
+}
+
+.exit-full-screen-btn.active {
+    display: block;
+    bottom: 10px;
+    right: 10px;
+}
+
+.exit-full-screen-btn i {
+    font-size: 1.7rem;
+}
+
+.img-container img {
+    max-width: 500px;
+    max-height: 350px;
+    margin: 0 auto;
+}
+
+.img-container img.full-size {
+    max-width: 100%;
 }
