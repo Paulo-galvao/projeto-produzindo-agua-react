@@ -1,17 +1,17 @@
+import TeamBanner from "../../Components/TeamBanner/TeamBanner"
 import Header from "../../Components/Header/Header"
+import Footer from "../../Components/Footer/Footer"
 import Events from "../../Components/Events/Events.jsx"
-import Footer from "../../Components/Footer/Footer.jsx"
-import AboutBanner from "../../Components/AboutBanner/AboutBanner.jsx"
 import Primer from "../../Components/Primer/Primer.jsx"
 
-export default function About() {
+export default function Team() {
   return (
-    <>
+    <div>
         <Header />
-        <AboutBanner />
+        <TeamBanner />
         <Events />
         <Primer />
         <Footer />
-    </>
+    </div>
   )
 }

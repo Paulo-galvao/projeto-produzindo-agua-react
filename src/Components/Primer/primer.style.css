@@ -1,0 +1,12 @@
+.primer-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.primer-card img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}

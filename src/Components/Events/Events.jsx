@@ -7,9 +7,9 @@ export default function Events() {
         <h2>Participações em eventos</h2>
             <ul className="events">
                 {events.map( event => (
-                    <a href={event.link}>
+                    <a key={event.title} href={event.link}>
                         <li>
-                            <i class='bx bx-chevrons-right'></i>
+                            <i className='bx bx-chevrons-right'></i>
                             {event.title}
                         </li>
                     </a>  

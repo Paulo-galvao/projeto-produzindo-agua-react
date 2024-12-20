@@ -27,7 +27,7 @@ aside {
 }
 
 .gallery-container aside li {
-    font-size: .9rem;
+    font-size: .8rem;
     cursor: pointer;
     padding: 5px 10px;    
     display: flex;
@@ -43,6 +43,7 @@ aside {
 
 .gallery-container aside li.active {
     background-color: rgb(179, 218, 255);
+    cursor: default;
 }
 
 .gallery-banner {

@@ -2,10 +2,27 @@ import photos from "./gallery.js"
 import { useState } from "react";
 import "./gallery.style.css"
 
-
 export default function GallerySlider() {
     const [count, setCount] = useState(0);
     const [galleryName, setName] = useState(photos.uepg);
+
+    // funcionamento do slide por teclado
+
+    window.onkeydown = function(e) {
+        if(e.key === "ArrowRight") {
+            setNextImg();
+        } else if(e.key === "ArrowLeft") {
+            setLastImg();
+        } else if(e.key === "Escape") {
+            removeFullScreen();
+        } else if(e.key === "F11") {
+            if(document.querySelector(".img-container").classList.contains("full-screen")) {
+                removeFullScreen();
+            } else {
+                setFullScreen();
+            }
+        }
+    }
 
     // funcionamento da troca de imagens
     
@@ -94,6 +111,8 @@ export default function GallerySlider() {
         
         // seta o novo tipo de galeria
         setName(gallery);
+
+        // volta na primeira imagem da galeria selecionada
         setCount(0);
         
     }
