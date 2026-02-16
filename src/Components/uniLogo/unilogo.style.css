@@ -1,0 +1,14 @@
+.uni-logo {
+    display: none;
+}
+
+.uni-logo.active {
+    display: block;
+    height: 8em;
+    position: absolute;
+    top: 80px;
+}
+
+.header-end img {
+    max-height: 10vh;
+}

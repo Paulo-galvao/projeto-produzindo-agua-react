@@ -15,25 +15,105 @@
     margin: 0 auto;
 }
 
-.menu ul{
-    list-style-type: none;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap:7px;
+.menu {
+    display: none;
+
 }
 
-.menu a {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--menu-font);
-    transition: .3s;
-    padding: 10px  15px;
+.menu.active {
+    display: flex;
+}
+
+.menu.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 60vw;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: var(--menu-mobile-bg);
+    animation: slideMenu .3s;
+}
+
+.menu.active li a {
+    font-size: 2em;
+    color: #fff;
     
 }
 
-.menu a:hover {
-    background-color: var(--menu-hover);
-  border-radius: 5px;
+.close-menu-btn {
+    position: absolute;
+    color: #fff;
+    right: 25px;
+    top: 10px;
+    font-size: 2.2em;
+}
+
+.mobile-icon {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    cursor: pointer;
+}
+
+.mobile-icon.active div {
+    background-color: var(--menu-font);
+    height: 7px;
+    width: 50px;
+    border-radius: 15px;
+}
+
+.header-end {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+@keyframes slideMenu {
+    from {
+        right: -50px;
+    } to {
+        right: 0;
+    }
+}
+
+/*  */
+@media (min-width: 992px) {
+    .header-container {
+    }
+
+
+    .menu ul{
+        list-style-type: none;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap:7px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--menu-font);
+        transition: .3s;
+        padding: 10px  15px;
+        
+    }
+
+    .menu a:hover {
+        background-color: var(--menu-hover);
+        border-radius: 5px;
+    }
+
+
+    .uni-logo {
+        display: flex;
+    }
+
 }
 

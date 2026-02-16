@@ -9,6 +9,8 @@
     --menu-hover: rgb(179, 218, 255);
     --standard-width: 1024px;
     --menu-font: rgba(0, 26, 51, .8);
+    --menu-mobile-bg: rgba(0, 26, 51);
+    --font-mobile: 12px;
   }
 
 body {
@@ -23,3 +25,4 @@ a {
 li {
     list-style: none;
 }
+
