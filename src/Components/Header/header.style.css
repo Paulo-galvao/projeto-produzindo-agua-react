@@ -22,12 +22,8 @@
 
 .menu.active {
     display: flex;
-}
-
-.menu.active {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100dvh;
     width: 60vw;
     position: absolute;
@@ -37,10 +33,16 @@
     animation: slideMenu .3s;
 }
 
+.menu.active ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
 .menu.active li a {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fff;
-    
+    padding-left: 1em;
 }
 
 .close-menu-btn {

@@ -8,14 +8,6 @@ import UniLogo from '../uniLogo/UniLogo'
 function Header() {
     const [activeMenu, setActiveMenu] = useState(false)
 
-    function openMenu() {
-        setActiveMenu(true);
-    }
-
-    function closeMenu() {
-        setActiveMenu(false)
-    }
-
     return (
         <header className='header'>
             <div className="header-container">
@@ -26,18 +18,18 @@ function Header() {
                 </div>
                 <nav className={`menu ${activeMenu ? 'active' : ''}`}>
                     {activeMenu && (
-                        <span onClick={closeMenu} className='close-menu-btn'>X</span>
+                        <span onClick={() => setActiveMenu(false)} className='close-menu-btn'>X</span>
                     )}
                     <ul>
                         <UniLogo active='active'/>
                         {menu.map( item => (
-                            <li key={item.id}><Link to={item.route}>{item.name}</Link></li>
+                            <li key={item.id}><Link to={item.route}>{activeMenu ? '- ' + item.name : item.name}</Link></li>
                         ))}
                     </ul>
                 </nav>
                 <div className='header-end'>
                     <UniLogo/>
-                    <div onClick={openMenu} className='mobile-icon active'>
+                    <div onClick={() => setActiveMenu(true)} className='mobile-icon active'>
                         <div></div>
                         <div></div>
                         <div></div>
